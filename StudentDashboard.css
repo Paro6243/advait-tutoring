@@ -1,0 +1,285 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+.header-actions .btn {
+  padding: 8px 15px;
+  font-size: 12px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background-color: white;
+  border-bottom: 2px solid #ddd;
+  padding: 0 20px;
+}
+
+.tab {
+  padding: 15px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #007bff;
+}
+
+.tab.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Profile Section */
+.profile-section h2,
+.form-section h2,
+.requests-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card p {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+/* Form Section */
+.request-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.request-form .form-group {
+  margin-bottom: 20px;
+}
+
+.request-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.request-form input:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.request-form .btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+/* Message */
+.message {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Requests Grid */
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.request-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #007bff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.status-new {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-badge.status-assigned {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.status-confirmed {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.status-badge.status-pending {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+.status-badge.status-accepted {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.request-card p {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.request-card .date,
+.request-card .posted {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.request-card .btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-text {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .requests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+
+  .tab {
+    padding: 12px 15px;
+    white-space: nowrap;
+  }
+}
