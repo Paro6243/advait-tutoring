@@ -27,6 +27,7 @@ function StudentDashboard({ user, onLogout }) {
     if (activeTab === 'requests') {
       fetchRequests();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab]);
 
   const fetchRequests = async () => {
