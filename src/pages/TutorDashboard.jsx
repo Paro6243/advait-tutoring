@@ -20,6 +20,7 @@ function TutorDashboard({ user, onLogout }) {
     } else if (activeTab === 'applications') {
       fetchMyApplications();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab]);
 
   const fetchAvailableRequests = async () => {
